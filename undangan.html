@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="jv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namamu & Sepviyanti - Pawiwahan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="custome.css">
+
+
+    
+</head>
+<body>
+    <div class="batik-pattern"></div>
+    
+    <nav class="floating-nav">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#couple">Mempelai</a></li>
+            <li><a href="#event">Acara</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#gifts">Amplop</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home" class="hero">
+        <h1 class="couple-names">Diyan Wisnu Pratama & Sepviyanti</h1>
+        <p class="hero-subtitle">Miwiti Lelakon Tresno – Undangan Pawiwahan</p>
+        <div style="margin-top: 40px;">
+            <i class="fas fa-heart" style="color: var(--gold); font-size: 2rem; animation: pulse 2s ease-in-out infinite;"></i>
+        </div>
+    </section>
+    
+    <div class="music-control" onclick="toggleMusic()">
+        <i id="music-icon" class="fas fa-play"></i>
+    </div>
+    
+    <div class="falling-flowers" id="flowers-container"></div>
+    
+    <section id="couple" class="section">
+        <h2 class="section-title">Saking Kandane Gusti</h2>
+        <div class="couple-profile">
+            <div class="couple-card">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--wood-brown);">Diyan Wisnu Pratama</h3>
+                <p style="color: var(--gold); margin-bottom: 15px;">Putra sulung saking Bapak Sudarso</p>
+                <p style="line-height: 1.8;">Alhamdulillah, pujian lan syukur marang Gusti Allah, bilih kula Diyan Wisnu Pratama sampun piyambak diparingi pangestu lan rejeki saking Gusti Allah kanggo nglaksanakake pawiwahan kanthi Sepviyanti.</p>
+            </div>
+            <div class="couple-card">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--wood-brown);">Sepviyanti</h3>
+                <p style="color: var(--gold); margin-bottom: 15px;">Putri bungsu saking Bapak Syarif</p>
+                <p style="line-height: 1.8;">Ingsun Sepviyanti, nulya nyuwun pangestun saking para tamu ageng, mugi-mugi bisa ndherek ngestokake pawiwahan kanthi Diyan Wisnu Pratama.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="font-style: italic; font-size: 1.2rem; color: var(--wood-brown);">
+                "Witing tresna jalaran saka kulina"
+            </p>
+        </div>
+    </section>
+    
+    <section id="event" class="section">
+        <h2 class="section-title">Wekdal Acara</h2>
+        <div class="event-info">
+            <div class="event-grid">
+                <div class="event-card">
+                    <i class="fas fa-mosque" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+                    <h3>Pengajian</h3>
+                    <p>14 Juni 2024<br>19:00 WIB</p>
+                </div>
+                <div class="event-card">
+                    <i class="fas fa-tint" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+                    <h3>Siraman</h3>
+                    <p>15 Juni 2024<br>08:00 WIB</p>
+                </div>
+                <div class="event-card">
+                    <i class="fas fa-star" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+                    <h3>Midodareni</h3>
+                    <p>15 Juni 2024<br>19:00 WIB</p>
+                </div>
+                <div class="event-card">
+                    <i class="fas fa-ring" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+                    <h3>Akad Nikah</h3>
+                    <p>16 Juni 2024<br>08:00 WIB</p>
+                </div>
+                <div class="event-card">
+                    <i class="fas fa-glass-cheers" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+                    <h3>Resepsi</h3>
+                    <p>16 Juni 2024<br>11:00 - 15:00 WIB</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 30px 0;">
+                <p style="font-size: 1.2rem; margin-bottom: 10px;">Lokasi: Pendopo Agung Mangkunegaran</p>
+                <a href="https://maps.google.com/?q=Pendopo+Agung+Mangkunegaran" target="_blank" class="btn" style="margin: 10px;">
+                    <i class="fas fa-map-marker-alt"></i> Buka di Maps
+                </a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 40px 0;">
+            <h3 style="margin-bottom: 20px;">Countdown menuju Hari H</h3>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div>Hari</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div>Jam</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div>Menit</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div>Detik</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="section">
+        <h2 class="section-title">Galeri Prawedding</h2>
+        <div class="gallery">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop" alt="Pre-wedding 1">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop" alt="Pre-wedding 2">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400&h=400&fit=crop" alt="Pre-wedding 3">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=400&h=400&fit=crop" alt="Pre-wedding 4">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=400&fit=crop" alt="Pre-wedding 5">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="https://images.unsplash.com/photo-1509610973147-232dfea52a9d?w=400&h=400&fit=crop" alt="Pre-wedding 6">
+            </div>
+        </div>
+    </section>
+    
+    <section id="rsvp" class="section">
+        <h2 class="section-title">Konfirmasi Kehadiran</h2>
+        <div class="rsvp-form">
+            <form id="rsvpForm" onsubmit="handleRSVP(event)">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Jumlah Tamu</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                        <option value="4">4 Orang</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Ucapan & Doa</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tuliskan ucapan dan doa untuk kedua mempelai..."></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Konfirmasi</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="gifts" class="section">
+        <h2 class="section-title">Amplop Digital</h2>
+        <div class="digital-envelope">
+            <p style="font-size: 1.2rem; margin-bottom: 20px; line-height: 1.8;">
+                Doa Panjenengan pun sampun cekap, nanging yen panjenengan kersa ngirimkan tanda kasih, kula ucapaken matur nuwun sanget.
+            </p>
+            <div style="margin: 30px 0;">
+                <h4 style="margin-bottom: 15px;">Transfer via Bank</h4>
+                <p style="font-size: 1.1rem;">BCA: 1234567890<br>a.n. Diyan Wisnu Pratama</p>
+                <button class="btn" onclick="copyToClipboard('1234567890')">Salin Nomor Rekening</button>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 15px;">QRIS</h4>
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/qris" alt="QRIS">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2 class="section-title">Buku Tamu Digital</h2>
+        <div class="guest-book">
+            <div class="message-list" id="messageList">
+                <div class="message-item">
+                    <strong>Keluarga besar Wisnu</strong>
+                    <p>Selamat atas pernikahannya, semoga menjadi keluarga yang sakinah, mawaddah, warahmah.</p>
+                </div>
+                <div class="message-item">
+                    <strong>Sahabat Sepviyanti</strong>
+                    <p>Happy wedding dear Sepviyanti & namamu! Semoga langgeng sampai tua, bahagia selalu.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea id="guestMessage" rows="3" placeholder="Tulis ucapan dan doa Anda di sini..."></textarea>
+                <button class="btn" onclick="addMessage()" style="margin-top: 15px;">Kirim Ucapan</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer style="background: var(--wood-brown); color: var(--cream); padding: 60px 20px; text-align: center;">
+        <h2 style="margin-bottom: 30px;">Matur Tampias</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8; max-width: 600px; margin: 0 auto;">
+            Mugi saget ndherek ngestokake lan maringi pangestu, supados pawiwahan iki bisa kalaksanakaken kanthi sukses lan tentrem.
+        </p>
+        <p style="margin-top: 30px; font-size: 1.1rem;">
+            Atas nama keluarga besar Bapak H. Ahmad Subagyo & Bapak H. Aditya Pratama
+        </p>
+    </footer>
+    
+    <div class="share-buttons">
+        <a href="#" class="share-btn wa-share" onclick="shareWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+namamu+%26+Sepviyanti&dates=20240616T020000Z/20240616T080000Z&details=Pernikahan+namamu+Wisnu+dan+Sepviyanti+Resda+Novalia&location=Pendopo+Agung+Mangkunegaran" target="_blank" class="share-btn calendar-share">
+            <i class="far fa-calendar-plus"></i>
+        </a>
+    </div>
+    
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImage" style="max-width: 100%; max-height: 80vh; border-radius: 10px;">
+        </div>
+    </div>
+    
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
